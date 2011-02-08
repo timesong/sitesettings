@@ -1,0 +1,18 @@
+sitesettings - A simple django app to manage site settings in admin panel. 
+
+1. Installation
+
+add 'sitesettings' into settings.INSTALLED_APPS
+add 'sitesettings.context_processors.settings' into settings.TEMPLATE_CONTEXT_PROCESSORS
+
+2. Usage
+
+a. add settings in admin panel - sitesettings
+b. in template: {{ group.key }} for example {{ contact_us.phone }}
+c. in source file: 
+    from sitesettings.models import settings
+    print settings.contact_us.phone
+
+3. Email: timesong@gmail.com
+   Twitter: timesong
+   Facebook: timesong
