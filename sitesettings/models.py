@@ -7,7 +7,7 @@ from django.contrib.sites.models import Site
 from django.contrib.sites.managers import CurrentSiteManager
 
 class Setting(models.Model):
-    site = models.OneToOneField(Site, verbose_name=_('Site'), default=Site.objects.get_current())
+    site = models.ForeignKey(Site, verbose_name=_('Site'), default=setting.SITE_ID)
     group = models.CharField(_('Group'), max_length=20, default="default")
 
     objects = CurrentSiteManager()
